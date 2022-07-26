@@ -51,7 +51,7 @@
     
     near proposals
     
-    ![001-1](https://user-images.githubusercontent.com/91251550/181028040-bed3b840-02f9-45d3-8df3-b93414f2b948.jpg)
+    ![image](https://user-images.githubusercontent.com/91251550/181028040-bed3b840-02f9-45d3-8df3-b93414f2b948.jpg)
 
     # Xem Validators Current
     
@@ -59,7 +59,7 @@
     
     # Xem Validator next
     
-    ![001-3](https://user-images.githubusercontent.com/91251550/181028350-47eacaf6-662c-4aff-b2a5-5657f49b3f8c.jpg)
+    ![image](https://user-images.githubusercontent.com/91251550/181028350-47eacaf6-662c-4aff-b2a5-5657f49b3f8c.jpg)
 
 3. Stake Wars: Episode III. Challenge 002
 
@@ -117,7 +117,7 @@
     
     ./target/release/neard --home ~/.near init --chain-id shardnet --download-genesis
     
-    ![002-4](https://user-images.githubusercontent.com/91251550/181031874-6b0a8954-a771-47bb-98df-ec9a703bc982.jpg)
+    ![image](https://user-images.githubusercontent.com/91251550/181031874-6b0a8954-a771-47bb-98df-ec9a703bc982.jpg)
 
     # Replace the config.json
     
@@ -127,7 +127,7 @@
     
     cd ~/.near && wget https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json
     
-    ![002-5](https://user-images.githubusercontent.com/91251550/181032981-94c5a4a3-44de-4ecf-af31-49a41f3e101d.jpg)
+    ![image](https://user-images.githubusercontent.com/91251550/181032981-94c5a4a3-44de-4ecf-af31-49a41f3e101d.jpg)
 
     
     # Run the node
@@ -141,7 +141,7 @@
   
   near login
   
-  ![002-7](https://user-images.githubusercontent.com/91251550/181034178-1dc90c84-8769-4066-b2cd-c7b41e1fcbcc.jpg)
+  ![image](https://user-images.githubusercontent.com/91251550/181034178-1dc90c84-8769-4066-b2cd-c7b41e1fcbcc.jpg)
 
   # 1 – Copy the link vào trình duyệt của bạn: với Account ID chính là tài khoản ví: VD: stakewarsnode1.shardnet.near
   
@@ -196,7 +196,7 @@
   && sudo systemctl restart neard \
   && sudo journalctl -n 100 -f -u neard
   
-  ![002-11](https://user-images.githubusercontent.com/91251550/181036312-daab9b1d-c062-42ab-8fcd-6b742e9445cb.jpg)
+  !![image](https://user-images.githubusercontent.com/91251550/181036312-daab9b1d-c062-42ab-8fcd-6b742e9445cb.jpg)
 
 4. Stake Wars: Episode III. Challenge 003
 
@@ -216,7 +216,7 @@
     
     near call factory.shardnet.near create_staking_pool ‘{“staking_pool_id”: “stakewarsnode1”, “owner_id”: “stakewarsnode1.shardnet.near”, “stake_public_key”: “ed25519:24Fuo2ohHeszxHoUk4d7hFd1oWCKBdoUXsKQcjFV7sHP”, “reward_fee_fraction”: {“numerator”: 1, “denominator”: 100}, “code_hash”:”DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ”}’ — accountId=”stakewarsnode1.shardnet.near” --amount=30 --gas=300000000000000
     
-    ![003-1](https://user-images.githubusercontent.com/91251550/181037923-c454db8f-07cf-47b5-bd02-7fb23bfcdbbb.jpg)
+    ![image](https://user-images.githubusercontent.com/91251550/181037923-c454db8f-07cf-47b5-bd02-7fb23bfcdbbb.jpg)
     
   b. Deposit and Stake NEAR
   
@@ -228,7 +228,7 @@
   
   near call stakewarsnode1.factory.shardnet.near deposit_and_stake --amount 110 --accountId stakewarsnode1.shardnet.near --gas=300000000000000
   
-  ![003-1](https://user-images.githubusercontent.com/91251550/181041336-213ac1bf-9f30-4219-bf67-65fea923e6a2.jpg)
+  ![image](https://user-images.githubusercontent.com/91251550/181041336-213ac1bf-9f30-4219-bf67-65fea923e6a2.jpg)
   
   # Nếu tạo Staking pool contract mà sai thông tin thì có thể update lại theo câu lệnh sau:
   
@@ -262,7 +262,7 @@ curl -s http://127.0.0.1:3030/status | jq .version
 
 near view <your pool>.factory.shardnet.near get_accounts '{"from_index": 0, "limit": 10}' --accountId <accountId>.shardnet.near
 
-![003-2](https://user-images.githubusercontent.com/91251550/181041140-dbc2e279-1cd0-4f84-95de-e59850213113.jpg)
+![image](https://user-images.githubusercontent.com/91251550/181041140-dbc2e279-1cd0-4f84-95de-e59850213113.jpg)
 
 # Check Reason Validator Kicked
 
@@ -278,7 +278,7 @@ curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params
 
 6. Stake Wars: Episode III. Challenge 006
 
-# Tạo cron task trên máy chạy node validator cho phép ping đến network một cách tự động
+# Tạo crontab trên máy chạy node validator cho phép ping đến network một cách tự động
 
 nano /home/ubuntu/scripts/ping.sh
 
